@@ -1,0 +1,207 @@
+.left-nav-block{
+    float: left;
+    height: 100%;
+    width: 3.74%;
+    position: relative;
+}
+.loading{
+    color: grey;
+    padding: 4px;
+    font-size: 15px;
+}
+.right-section{
+    float: left;
+    position: relative;
+    width: 96.26%;
+    height: 100%;
+    .map-block{
+        background: #F00;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .page-hide {        
+        display: none;
+    }
+    .list-block{
+        margin: 65px 25px 0 25px;
+        height: 100%;
+        table{
+            width: 100%;
+            tr{
+                border-radius: 5px;
+                th{
+                background: #e4e7ee;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-family: 'Gotham';
+                font-weight: 500;
+                }
+            td{
+                font-size: 12px;
+                color: #333333;
+                font-family: 'Gotham';
+                font-weight: 400;
+                padding: 5px 10px;
+                background: #FFF;
+                border-top: 15px solid #f3f4f6;
+                .status-circle{
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 5px 0 0;
+                    border-radius: 50%;
+                    &.colr-1{
+                        background: #14afa4;
+                    }
+                    &.colr-2{
+                        background: #ff6600;
+                    }
+                }
+                }
+            }
+            
+        }
+    }
+    .chart-block{
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        padding: 25px;
+        .chart-section{
+            margin: 50px 0 0 0;
+            background: yellow;
+            width:100%;
+            border-radius: 5px;
+            overflow: hidden;
+            .dates-block{
+                background: #e4e7ee;
+                width: 100%;
+                padding: 18px 0 20px 20%;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        list-style:none;
+                        float: left;
+                        color: #333333;
+                        font-size: 12px;
+                        font-family: 'Gotham';
+                        font-weight: 400;
+                        padding: 0 20px 0 0;
+                        position: relative;
+                    }
+                }
+            }
+            .chart-data{
+                width: 100%;
+                background: #f9f9f9;
+                table{
+                    width: 100%;
+                    tr{
+                        &:nth-child(odd) {
+                            background: #FFF;
+                        }
+                        td{
+                            color: #333333;
+                            padding: 10px 10px;
+                            position: relative;
+                            z-index: 5;
+                            &.chart-heading{
+                                border-right: 1px solid #eaeaea;
+                            }
+                            .chart-circle{
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                display: inline-block;
+                                position: absolute;
+                                top: 7px;
+                                right: 10px;
+                                text-align: center;
+                                color: #FFF;
+                            }
+                            .one-date{
+                                width:230px;
+                                height:20px;
+                                border-radius:60px;
+                                z-index: 4;
+                            }
+                            .colr-1{
+                                background:#14afa4;
+                            }
+                            .colr-2{
+                                background: #ff6600;
+                                
+                            }
+                            .colr-3{
+                                background: #ffae00;
+                            }
+                            .colr-4{
+                                background: #8197f2;
+                            }
+                            .colr-5{
+                                background: #6ec2f7;
+                            }
+                            .distance-1{
+                                margin: 0 0 0 -10px;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            .distance-2{
+                                margin: 0 0 0 200px;
+                            }
+                            .distance-3{
+                                margin: 0 0 0 300px;
+                            }
+                            .distance-4{
+                                margin: 0 0 0 400px;
+                            }
+                            .distance-5{
+                                margin: 0 0 0 500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pages-btn{
+        background: #FFF;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+        border-radius: 3px;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                float: left;
+                color: #006bd5;
+                font-family: 'Gotham';
+                font-weight: 400;
+                font-size: 12px;
+                padding: 7px 15px;
+                height: 35px;
+                text-align: center;
+                border-right: 1px solid #eaeaea;
+                img{
+                    vertical-align: middle;
+                    margin: 0 5px 0 0;
+                }
+                &.page-active{
+                    background:#006bd5;
+                    color: #FFF;
+                }
+                &:hover{
+                    background: #006bd5;
+                    color: #FFF;
+                }
+                &.no-border-rite{
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

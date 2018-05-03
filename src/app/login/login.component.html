@@ -1,0 +1,32 @@
+<div class="login-block">
+    <div class="logo-bg-block">
+        <img src="assets/img/loginbg.png" class="logo-bg" alt="logo bg" />
+        <img src="assets/img/logo.png" class="logo-img" alt="logo" />
+    </div>
+    <div class="login-form">
+        <form (ngSubmit)="login()">
+            <h1>Quartz Energy</h1>
+            <h2>Offset Operator Frac Schedule</h2>
+            <div>
+                <input type="text" placeholder="Username" [(ngModel)]="username" name="username" class="username" [class.error]="showError"
+                />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="password" [class.error]="showError"
+                />
+            </div>
+            <div>
+                <button class="sign-in-btn">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="bottom-btns">
+    <div class="learnmore">
+        <a href="/learnmore">Learn More</a>
+    </div>
+    <div class="requestaccess">
+        <a href="#">Request Access</a>
+    </div>
+    <div class="clearfix"></div>
+</div>

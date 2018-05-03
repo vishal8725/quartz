@@ -1,0 +1,57 @@
+.left-nav-block{
+    float: left;
+    height: 100%;
+    width: 3.74%;
+    position: relative;
+}
+.loading{
+    color: grey;
+    padding: 4px;
+    font-size: 15px;
+}
+.right-section{
+    float: left;
+    position: relative;
+    width: 96.26%;
+    height: 100%;
+    .list-block{
+        margin: 65px 25px 0 25px;
+        height: 100%;
+        table{
+            width: 100%;
+            tr{
+                border-radius: 5px;
+                th{
+                background: #e4e7ee;
+                padding: 5px 10px;
+                font-size: 12px;
+                font-family: 'Gotham';
+                font-weight: 500;
+                }
+            td{
+                font-size: 12px;
+                color: #333333;
+                font-family: 'Gotham';
+                font-weight: 400;
+                padding: 5px 10px;
+                background: #FFF;
+                border-top: 15px solid #f3f4f6;
+                .status-circle{
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 5px 0 0;
+                    border-radius: 50%;
+                    &.colr-1{
+                        background: #14afa4;
+                    }
+                    &.colr-2{
+                        background: #ff6600;
+                    }
+                }
+                }
+            }
+            
+        }
+    }
+}

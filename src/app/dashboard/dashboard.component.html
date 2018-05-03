@@ -1,0 +1,138 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="left-nav-block">
+    <app-leftnav></app-leftnav>
+</div>
+<div class="right-section">
+    <div class="map-block" id="map" [class.page-hide]="!isActive('map')">
+        <div id="map" style="width:100%;height:500px"></div>
+    </div>
+    <div class="list-block" id="list" [class.page-hide]="!isActive('list')" detect-scroll [bottomOffset]="200" [topOffset]="200"
+        (onScroll)="handleScroll($event)">
+        <table>
+            <tr>
+                <th (click)="sort('wellName')">Well Name</th>
+                <th (click)="sort('operator')">Operator</th>
+                <th (click)="sort('fracStart')">Frac Start</th>
+                <th (click)="sort('fracEnd')">Frac End</th>
+                <th (click)="sort('duration')">Duration(d)</th>
+                <th (click)="sort('api')">API</th>
+                <th (click)="sort('surfaceLatitude')">Surface Lat, Long</th>
+                <th (click)="sort('bottomHoleLatitude')">Bottomhole Lat, Long</th>
+                <th (click)="sort('TVD')">TVD</th>
+                <th (click)="sort('startsIn')">Start in (d)</th>
+            </tr>
+            <tr *ngFor="let well of Wells">
+                <td>{{well.wellName}}</td>
+                <td>{{well.operator}}</td>
+                <td>{{well.fracStart}}</td>
+                <td>{{well.fracEnd}}</td>
+                <td class="text-center">{{well.duration}}</td>
+                <td>{{well.api}}</td>
+                <td>{{well.surfaceLatitude}}, {{well.surfaceLongitude}}</td>
+                <td>{{well.bottomHoleLatitude}}, {{well.bottomHoleLongitude}}</td>
+                <td>{{well.TVD}}</td>
+                <td>
+                    <div class="status-circle colr-1"></div>
+                    {{startsInText(well.startsIn)}}
+                </td>
+            </tr>
+        </table>
+        <div class="loading" *ngIf="Loading">Loading more items...</div>
+    </div>
+    <div class="chart-block" id="chart" [class.page-hide]="!isActive('chart')">
+        <div class="chart-section">
+            <div class="dates-block">
+                <ul>
+                    <li>Today 04/07/2018</li>
+                    <li>
+                        04/07/2018
+                    </li>
+                    <li>04/07/2018</li>
+                    <li>05/07/2018</li>
+                    <li>05/07/2018</li>
+                    <li>05/07/2018</li>
+                    <li>06/07/2018</li>
+                    <li>06/07/2018</li>
+                    <li>06/07/2018</li>
+                    <li>07/07/2018</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="chart-data">
+                <table>
+                    <tr>
+                        <td width="25%" class="chart-heading">
+                            TREES STATE 17-18-4303H
+                            <div class="chart-circle colr-1">
+                                <img src="assets/img/settings.png" alt="settings" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="one-date colr-1 distance-1"></div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td width="25%" class="chart-heading">
+                            TREES STATE 17-18-4303H
+                            <div class="chart-circle colr-2">
+                                2
+                            </div>
+                        </td>
+                        <td>
+                            <div class="one-date colr-2 distance-2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%" class="chart-heading">
+                            TREES STATE 17-18-4303H
+                            <div class="chart-circle colr-3">
+                                5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="one-date colr-3 distance-3"></div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td width="25%" class="chart-heading">
+                            TREES STATE 17-18-4303H
+                            <div class="chart-circle colr-4">
+                                8
+                            </div>
+                        </td>
+                        <td>
+                            <div class="one-date colr-4 distance-4"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%" class="chart-heading">
+                            TREES STATE 17-18-4303H
+                            <div class="chart-circle colr-5">
+                                4
+                            </div>
+                        </td>
+                        <td>
+                            <div class="one-date colr-5 distance-5"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pages-btn">
+        <ul>
+            <li id="map-btn" class="page-active" [class.page-active]="isActive('map')" (click)="selectTab('map')">
+                <img src="assets/img/mapactive.png" alt="map" /> Map
+            </li>
+            <li id="list-btn" [class.page-active]="isActive('list')" (click)="selectTab('list')">
+                <img src="assets/img/listicon.png" alt="list" /> List
+            </li>
+            <li id="chart-btn" class="no-border-rite" [class.page-active]="isActive('chart')" (click)="selectTab('chart')">
+                <img src="assets/img/charticon.png" alt="chart" />Chart
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>

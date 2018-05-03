@@ -1,0 +1,88 @@
+.close-big{
+    cursor: pointer;
+    float: right;
+    margin: 15px 35px 35px 15px;
+}
+.learn-more-block{
+    width: 900px;
+    height: 500px;
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+    overflow: auto;
+    background: #FFF;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    .img-block{
+        width: 32%;
+        height: 100%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        .main-img{
+            width: 100%;
+            height: 100%;
+        }
+        .blue{
+            position: absolute;
+            bottom: -55px;
+            left: -75px;
+        }
+        .blue-light{
+            position: absolute;
+            bottom: -55px;
+            left: -55px;
+        }
+    }
+    .logo-block{
+        width: 13%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        img{
+            margin: 25px 0 0 0;
+            width: 50px;
+        }
+    }
+    .content-block{
+        width: 55%;
+        height: 100%;
+        float: left;
+        .title-list{
+            margin: 25px 0 0 0;
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    list-style: none;
+                    float: left;
+                    padding: 0 10px 0 0;
+                    font-size: 16px;
+                    font-family: 'Gotham';
+                    font-weight: 400;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .title{
+            margin: 15px 0 0 0;
+            font-family: 'Gotham';
+            padding: 0 35px 0 0;
+            
+            h2{
+                font-size: 24px;
+                color: #006bd5;
+                margin: 0;
+                padding: 0;
+            }
+            p{
+                font-size: 14px;
+                margin: 15px 0 0 0;
+                padding: 0;
+                color: #666666;
+            }
+        }
+    }
+}

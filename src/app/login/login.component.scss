@@ -1,0 +1,101 @@
+.login-block{
+    background:#FFF;
+    width:380px;
+    height:430px;
+    margin: 80px auto 0 auto;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
+    .logo-bg-block{
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        img{
+            &.logo-bg{
+                width: 100%;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+        }
+        img{
+            &.logo-img{
+                position: absolute;
+                top: 37%;
+                left: 40%;
+            }
+        }
+    }
+    
+    .login-form{
+        width: 100%;
+        text-align: center;
+        margin: 30px 0 0 0;
+        h1{
+            margin: 0 0 5px 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: 'Gotham';
+            font-weight: 700;
+        }
+        h2{
+            margin: 0 0 20px 0;
+            padding: 0;
+            font-size: 16px;
+            font-family: 'Gotham';
+            font-weight: 400;
+        }
+        input{
+            border: none;
+            padding: 7px 15px 5px 40px;
+            margin: 0 0 15px 0;
+            border-radius: 60px;
+            width: 85%;
+            font-size: 14px;
+            font-family: 'Gotham';
+            font-weight: 400;
+            &.username{
+                background: url('../../assets/img/usericon.png') no-repeat 5% 50% #f0f3f6;
+            }
+            &.password{
+                background: url('../../assets/img/passwordicon.png') no-repeat 5% 50% #f0f3f6;
+            }
+        }
+        button{
+            &.sign-in-btn{
+                background: #006bd5;
+                border: none;
+                border-radius: 60px;
+                width: 85%;
+                font-size: 14px;
+                color: #FFF;
+                padding: 7px 15px;
+                margin: 10px 0 0 0;
+            }
+        }
+        .error{
+            border: 1px red solid;
+        }
+    }
+}
+.bottom-btns{
+    width: 380px;
+    margin: 25px auto 0 auto;
+    font-size: 12px;
+    font-family: 'Gotham';
+    font-weight: 400;
+    .learnmore{
+        float: left;
+        a{
+            color: #006bd5;
+            text-decoration: underline;
+        }
+    }
+    .requestaccess{
+        float: right;
+        a{
+            color: #006bd5;
+            text-decoration: underline;
+        }
+    }
+}

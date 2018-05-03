@@ -1,0 +1,152 @@
+[
+    {
+        "companyName": "Eggon Mobile",
+        "lastSubmission": "03/15/2018",
+        "contacts": [
+            {
+                "contactOrder": 1,
+                "name": "John Show",
+                "role": "General Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 2,
+                "name": "Jane Scott",
+                "role": "Project Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 3,
+                "name": "Anthony Spears",
+                "role": "Specialist",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 4,
+                "name": "Lucy Lowell",
+                "role": "Field Operator",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 5,
+                "name": "Lucy Lowell 2",
+                "role": "Field Operator",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            }
+        ]
+    },
+    {
+        "companyName": "Company Name 2",
+        "lastSubmission": "03/15/2018",
+        "contacts": [
+            {
+                "contactOrder": 1,
+                "name": "John Dow One",
+                "role": "General Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 2,
+                "name": "John Dow Two",
+                "role": "Project Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 3,
+                "name": "John Dow Three",
+                "role": "Specialist",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 4,
+                "name": "John Dow Four",
+                "role": "Field Operator",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            }
+        ]
+    },
+    {
+        "companyName": "Company Name 3",
+        "lastSubmission": "12/30/2018",
+        "contacts": [
+            {
+                "contactOrder": 1,
+                "name": "Memeber One",
+                "role": "General Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 2,
+                "name": "Member Two",
+                "role": "Project Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 3,
+                "name": "Member Three",
+                "role": "Specialist",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            }
+        ]
+    },
+    {
+        "companyName": "Company Name 4",
+        "lastSubmission": "12/30/2018",
+        "contacts": [
+            {
+                "contactOrder": 1,
+                "name": "Elon Musk One",
+                "role": "General Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            },
+            {
+                "contactOrder": 2,
+                "name": "Elon Musk Two",
+                "role": "Project Manager",
+                "email": "email@eggonmobile.com",
+                "phone": "123 123 1234",
+                "location": "Houston, TX",
+                "imgUrl": "assets/img/profilpic.png"
+            }
+        ]
+    }
+]

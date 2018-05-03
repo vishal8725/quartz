@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="left-nav-block">
+    <app-leftnav></app-leftnav>
+</div>
+<div class="right-section">
+    <div class="list-block page-active" id="list" detect-scroll [bottomOffset]="200" [topOffset]="200" (onScroll)="handleScroll($event)">
+        <table>
+            <tr>
+                <th (click)="sort('wellName')">Well Name</th>
+                <th (click)="sort('fracStart')">Frac Start</th>
+                <th (click)="sort('fracEnd')">Frac End</th>
+                <th (click)="sort('duration')">Duration(d)</th>
+                <th (click)="sort('api')">API</th>
+                <th (click)="sort('operator')">Operator</th>
+            </tr>
+        </table>
+        <table *ngFor="let wells of Wells;let idx = index;">
+
+            <span *ngIf="idx === 0">
+                This month, {{ getMonthName(wells[0].fracStart)+ ' '+ getYear(wells[0].fracStart) }}
+            </span>
+            <span *ngIf="idx === 1">
+                Next month, {{ getMonthName(wells[0].fracStart)+ ' '+ getYear(wells[0].fracStart) }}
+            </span>
+            <span *ngIf="idx >= 0">
+                {{ getMonthName(wells[0].fracStart)+ ' '+ getYear(wells[0].fracStart) }}
+            </span>
+
+            <tr *ngFor="let well of wells">
+                <td>{{well.wellName}}</td>
+                <td>{{well.fracStart}}</td>
+                <td>{{well.fracEnd}}</td>
+                <td class="text-center">{{well.duration}}</td>
+                <td>{{well.api}}</td>
+                <td>{{well.operator}}</td>
+            </tr>
+        </table>
+        <div class="loading" *ngIf="Loading">Loading more items...</div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="left-nav-block">
+    <app-leftnav></app-leftnav>
+</div>
+<div class="right-section upload-block">
+    <h1>
+        Upload Data
+    </h1>
+    <div class="clearfix"></div>
+    <div class="single-upload-block">
+        <div class="single-upload-form">
+            <h2>Single Upload</h2>
+            <form>
+                <div class="single-title">Company Name</div>
+                <input name="wellName" type="text" class="full-width" [(ngModel)]="selectedWell.operator" />
+                <div class="clearfix"></div>
+                <div class="single-title">Well Name</div>
+                <input name="wellName" type="text" class="full-width" [(ngModel)]="selectedWell.wellName"
+                [ngbTypeahead]="search" [resultFormatter]="formatter" />
+                <div class="clearfix"></div>
+                <div class="half-width right-space">
+                    <div class="single-title">Frac Start Date</div>
+                    <input name="fracStart" type="date" class="calender" [(ngModel)]="selectedWell.fracStart" />
+                </div>
+                <div class="half-width">
+                    <div class="single-title">Frac End Date</div>
+                    <input name="fracEnd" type="date" class="calender" [(ngModel)]="selectedWell.fracEnd" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="half-width right-space">
+                    <div class="single-title">Surface Lat.</div>
+                    <input name="surfaceLatitude" type="text" [(ngModel)]="selectedWell.surfaceLatitude" />
+                </div>
+                <div class="half-width">
+                    <div class="single-title">Surface Long.</div>
+                    <input name="surfaceLongitude" type="text" [(ngModel)]="selectedWell.surfaceLongitude" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="half-width right-space">
+                    <div class="single-title">Bottomhole Lat.</div>
+                    <input name="bottomHoleLatitude" type="text" [(ngModel)]="selectedWell.bottomHoleLatitude" />
+                </div>
+                <div class="half-width">
+                    <div class="single-title">Bottomhole Long.</div>
+                    <input name="bottomHoleLongitude" type="text" [(ngModel)]="selectedWell.bottomHoleLongitude" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="single-title">Target formation or TVD</div>
+                <input name="TVD" type="text" class="full-width" [(ngModel)]="selectedWell.TVD" />
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <div class="clear-btn">
+            <button (click)="clearSingle()">Clear</button>
+        </div>
+    </div>
+
+    <div class="batch-upload-block">
+        <div class="batch-upload-form">
+            <h2>Batch Upload</h2>
+            <section class="batch-upload-form" id="file-drop-zone" *ngIf="!fileIsUploading" ng2FileDrop (onFileDrop)="onDrop($event)"
+                (fileOver)="onFileOverDropZone($event)" [uploader]="uploader" [class.drop-zone--highlighted]="draggingOverDropZone">
+                <img src="assets/img/downlod-icon.png" alt="download" />
+                <p>
+                    Drag & Drop CSV file here
+                </p>
+                <p class="browse-text">
+                    <input type="file" id="file-input" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                        (change)="onFileChange($event)"> or
+
+                    <label for="file-input">
+                        <span>browse from your computer</span>
+                    </label>
+                </p>
+                <a href="assets/data/batch-template.csv">
+                    <button type="submit">
+                        Download CSV Template
+                    </button>
+                </a>
+            </section>
+            <section class="batch-upload-form" *ngIf="fileIsUploading">
+                <img id="delete-icon" src="assets/img/trash.png" alt="" (click)="cancelFileUpload()">
+                <div id='upload-progress'>
+
+                    <span>{{mockFile.name}}</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" [attr.aria-valuenow]="fileUploadProgress" aria-valuemin="0"
+                            aria-valuemax="100" [style.width]="fileUploadProgress+'%'">
+                        </div>
+                    </div>
+                    <span>{{fileUploadProgress}}% completed - {{fileMBUploaded}}/{{mockFile.size}} KB</span>
+                </div>
+            </section>
+        </div>
+        <div class="batch-btns">
+            <button class="claer-btn-batch" (click)="cancelFileUpload()">Clear</button>
+            <button class="submit-btn-batch" (click)="clearSingle()">Submit</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

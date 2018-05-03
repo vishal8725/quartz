@@ -1,0 +1,145 @@
+<app-header></app-header>
+<div class="clearfix"></div>
+<div class="left-nav-block">
+    <app-leftnav></app-leftnav>
+</div>
+<div class="right-section">
+    <div class="company">
+        <div class="company-names">
+            <ul>
+                <li *ngFor="let cmp of companies" [class.active-company]="cmp===selectedCompany" (click)="selectCompany(cmp)">
+                    <h2>{{cmp.companyName}}</h2>
+                    <p>Last Submission: {{cmp.lastSubmission}}</p>
+                    <div *ngIf="cmp===selectedCompany" >
+                        <img src="assets/img/edit.png" alt="message" />
+                        <img src="assets/img/trash.png" (click)="removeCompany(cmp)" alt="message" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="company-detail-block">
+            <div>+</div>
+            <span>Add Company</span>
+        </div>
+    </div>
+    <div class="company-listing" *ngIf="selectedCompany">
+        <div class="company-title-block">
+            <div class="company-title">
+                <img src="assets/img/companylogo.png" alt="company logo" /> {{selectedCompany.companyName}}
+            </div>
+            <div class="compant-btns">
+                <button class="email-btn">Email All Contacts</button>
+                <button class="contact-btn">All Contact</button>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="company-listing-block">
+            <table>
+                <tr>
+                    <th>
+                        <input type="checkbox" />
+                    </th>
+                    <th class="text-center">Contact Order</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let cnt of selectedCompany.contacts">
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td class="text-center">
+                        <div class="profile-circle">
+                            <div class="profile-pic-user">
+                                <img src="{{cnt.imgUrl}}" alt="users" />
+                            </div>
+                            <div class="user-num">1</div>
+                        </div>
+                    </td>
+                    <td>{{cnt.name}}</td>
+                    <td>{{cnt.role}}</td>
+                    <td>{{cnt.email}}</td>
+                    <td>{{cnt.phone}}</td>
+                    <td>{{cnt.location}}</td>
+                    <td>
+                        <img src="assets/img/message.png" alt="message" />
+                        <img src="assets/img/edit.png" alt="message" />
+                        <img src="assets/img/trash.png" (click)="removeContact(cnt)" alt="message" />
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td class="text-center">
+                        <div class="profile-circle">
+                            <div class="profile-pic-user">
+                                <img src="assets/img/profilpic.png" alt="users" />
+                            </div>
+                            <div class="user-num">1</div>
+                        </div>
+                    </td>
+                    <td>John Snow</td>
+                    <td>General Manager</td>
+                    <td>email@eggonmobil</td>
+                    <td>123 123 1234</td>
+                    <td>Houston, TX</td>
+                    <td>
+                        <img src="assets/img/message.png" alt="message" />
+                        <img src="assets/img/edit.png" alt="message" />
+                        <img src="assets/img/trash.png" alt="message" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td class="text-center">
+                        <div class="profile-circle">
+                            <div class="profile-pic-user">
+                                <img src="assets/img/profilpic.png" alt="users" />
+                            </div>
+                            <div class="user-num">1</div>
+                        </div>
+                    </td>
+                    <td>John Snow</td>
+                    <td>General Manager</td>
+                    <td>email@eggonmobil</td>
+                    <td>123 123 1234</td>
+                    <td>Houston, TX</td>
+                    <td>
+                        <img src="assets/img/message.png" alt="message" />
+                        <img src="assets/img/edit.png" alt="message" />
+                        <img src="assets/img/trash.png" alt="message" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td class="text-center">
+                        <div class="profile-circle">
+                            <div class="profile-pic-user">
+                                <img src="assets/img/profilpic.png" alt="users" />
+                            </div>
+                            <div class="user-num">1</div>
+                        </div>
+                    </td>
+                    <td>John Snow</td>
+                    <td>General Manager</td>
+                    <td>email@eggonmobil</td>
+                    <td>123 123 1234</td>
+                    <td>Houston, TX</td>
+                    <td>
+                        <img src="assets/img/message.png" alt="message" />
+                        <img src="assets/img/edit.png" alt="message" />
+                        <img src="assets/img/trash.png" alt="message" />
+                    </td>
+                </tr> -->
+            </table>
+        </div>
+    </div>
+</div>

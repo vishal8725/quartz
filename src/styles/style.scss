@@ -1,0 +1,22 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'font';
+body{
+    background: #f3f4f6;
+    height: 100%;
+    position:relative;
+}
+html {
+  height: 100%;
+}
+.left-nav-block{
+    float: left;
+    height: 100%;
+    width: 3.74%;
+    position: relative;
+}
+.right-section{
+    float: left;
+    position: relative;
+    width: 96.26%;
+    height: 100%;
+}

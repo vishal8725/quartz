@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Submission</title>
+  <base href="/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+<body>
+  <app-root></app-root>
+</body>
+<script>
+  
+  var map;
+    function initMap() {
+     
+      var myLatLng = new google.maps.LatLng(48.855510, 2.365505);
+      var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 18,
+         center: myLatLng,
+         mapTypeId: google.maps.MapTypeId.ROADMAP,
+         styles: [{"stylers": [{ "saturation": -100 }]}]
+      });
+        var pos = [new google.maps.LatLng(48.856259, 2.365043),
+                    ,new google.maps.LatLng( 48.85484,  2.366427)];
+
+				var locations = [
+					{
+						title: 'All Wells',
+						position: pos[0],
+						icon: {
+              url: "../assets/img/circle-map.png",
+							scaledSize: new google.maps.Size(50, 50)
+						}
+
+					},
+					{
+						title: 'All Wells',
+						position: pos[1],
+						icon: {
+							url: "../assets/img/circle-map.png",
+							scaledSize: new google.maps.Size(50, 50)
+						}
+					}					
+				];
+				
+				locations.forEach( function( element, index ){	
+					var marker = new google.maps.Marker({
+						position: element.position,
+						map: map,
+						title: element.title,
+						icon: element.icon,
+					});
+				});	
+			}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+</html>

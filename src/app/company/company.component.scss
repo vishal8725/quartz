@@ -1,0 +1,161 @@
+.company{
+     position: relative;
+     width: 20%;
+     background: #2f3340;
+     height: 100%;
+     float: left;
+    .company-names{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+            :hover{
+                cursor: pointer;
+            }
+            
+                list-style: none;
+                padding: 5px 10px 0px;
+                color: #74798d;
+                h2{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                }
+                p{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 11px;
+                    .error{
+                        width: 13px;
+                        height: 13px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        background: #ff1200;
+                        color: #2f3340;
+                        text-align: center;
+                        line-height: 13px;
+                        margin: 0 0 0 10px;
+                    }
+                }
+                &.active-company{
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .company-detail-block{
+        position: absolute;
+        background: #006bd5;
+        color: #FFF;
+        left: 20%;
+        right: 0;
+        bottom: 80px;
+        width: 120px;
+        text-align: right;
+        font-size: 12px;
+        font-family: 'Gotham';
+        font-weight: 500;
+        padding: 8px 8px 8px 0;
+        border-radius: 60px;
+        div{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid #FFF;
+            color: #FFF;
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            line-height: 10px;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+}
+.company-listing{
+    float: left;
+    width: 80%;
+    padding: 15px;
+    .company-title-block{
+        width: 100%;
+        margin: 0 0 15px 0;
+        float: left;
+        .company-title{
+            font-size: 24px;
+            float: left;
+            color: #333333;
+            img{
+                margin: 0 5px 0 0;
+            }
+        }
+        .compant-btns{
+            float: right;
+            button{
+                border: none;
+                color: #FFF;
+                padding: 7px 15px 7px 45px;
+                font-size: 12px;
+                border-radius: 60px;
+                margin: 10px 0 0 10px;
+                &.email-btn{
+                    background: url('../../assets/img/emailmsg.png') no-repeat 10% 50% #006bd5;
+                }
+                &.contact-btn{
+                    background: url('../../assets/img/adduser.png') no-repeat 12% 50% #006bd5;
+                }
+                
+            }
+        }
+    }
+    .company-listing-block{
+        float: left;
+        width: 100%;
+        table{
+            width: 100%;
+            th{
+                font-size: 12px;
+                color: #333333;
+                padding: 5px 15px;
+                background: #e4e7ee;
+            }
+            td{
+                font-size: 12px;
+                color: #333333;
+                padding: 5px 15px;
+                background: #FFF;
+                border-top: 10px solid #f3f4f6;
+                .profile-circle{
+                    position:relative;
+                    .profile-pic-user{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    overflow: hidden;
+                    position: relative;
+                    img{
+                        width: 100%;  
+                        margin: 0;                  
+                    }
+                }
+                .user-num{
+                        position: absolute;
+                        top: -5px;
+                        right: 20px;
+                        width:25px;
+                        height: 25px;
+                        color: #333333;
+                        background:#e4e7ee;
+                        border-radius: 50%;
+                        line-height: 25px;
+                    }
+                }
+                
+                img{
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

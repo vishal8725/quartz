@@ -1,0 +1,46 @@
+<div class="leftnav-menu">
+    <div class="menu-bar">
+        <ul>
+            <li>
+                <a href="/dashboard">
+                    <img src="assets/img/dashboardactive.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="" routerLink="/company">
+                    <img src="assets/img/clientcompanyicon.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="/calender">
+                    <img src="assets/img/calendaricon.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="assets/img/helpicon.png" alt="" />
+                </a>
+            </li>
+            <li href="/settings">
+                <a href="">
+                    <img src="assets/img/settingsicon.png" alt="" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-menu">
+        {{activeMenu}}
+        <ul>
+            <li>
+                <div class="profile-circle">
+                    <img src="assets/img/profilpic.png" alt="profile pic" />
+                </div>
+            </li>
+            <li>
+                <a href="#" (click)="logout()">
+                    <img src="assets/img/logouticon.png" alt="logout" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

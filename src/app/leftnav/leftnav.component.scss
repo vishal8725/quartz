@@ -1,0 +1,51 @@
+.leftnav-menu{
+    background: #44495c;
+    position: relative;
+    height: 100%;
+    .menu-bar{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                &.active-menu{
+                    background: #2e323f;
+                }
+                &:hover{
+                    background: #2e323f;
+                }
+            }
+        }
+    }
+    .bottom-menu{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                padding: 10px 0;
+                .profile-circle{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #FFF;
+                    margin: 0 0 0 9px;
+                    text-align: center;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

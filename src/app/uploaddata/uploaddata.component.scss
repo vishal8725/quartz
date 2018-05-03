@@ -1,0 +1,181 @@
+
+.upload-block{
+    padding: 15px;
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        color: #333333;
+        font-family: 'Gotham';
+        font-weight: 400;
+    }
+    .single-upload-block{
+        width:49%;
+        margin: 2% 1% 0 0;
+        float:left;
+        .single-upload-form{
+            background:#FFF;
+            padding: 15px;
+            h2{
+            margin: 0 0 10px 0;
+            padding: 0;
+            color: #00a963;
+            font-size: 16px;
+            font-family: 'Gotham';
+            font-size: 500;
+        }
+        .single-title{
+            font-size: 12px;
+            color: #333333;
+            font-family: 'Gotham';
+            font-weight: 400;
+            margin: 0 0 5px 0;
+        }
+        .full-width{
+            border: 1px solid #e8e8e8;
+            border-radius: 60px;
+            padding: 0 15px 4px 15px;
+            width: 100%;
+            margin: 0 0 5px 0;
+        }
+        .half-width{
+            width: 49%;
+            margin:0 0 10px 0;
+            float: left;
+            input{
+                border: 1px solid #e8e8e8;
+                 padding: 0 15px 4px 15px;
+                 width: 100%;
+                 border-radius: 60px;
+                 &.calender{
+                     background: url('../../assets/img/calendar-icon.png') no-repeat 95% 50% #FFF;
+                 }
+            }
+        }
+        .right-space{
+            margin: 0 2% 0 0;
+        }
+        }
+        
+        .clear-btn{
+            margin: 20px 0 0 0;
+            button{
+                border: 1px solid #006bd5;
+                color: #006bd5;
+                background: transparent;
+                text-align: center;
+                padding: 5px 25px;
+                border-radius: 60px;
+                font-size: 12px;
+                font-family: 'Gotham';
+                font-weight: 500;
+            }
+        }
+    }
+    .batch-upload-block{
+        width:49%;
+        margin: 2% 0 0 1%;
+        float:left;
+        #file-input{
+            opacity: 0;
+            width: 0;
+        }
+
+        
+        .progress{
+            width: 300px;
+            height: 2px;
+            display: flex;
+            align-content: center; 
+            margin-left: 100px;   
+        }
+
+        #delete-icon {
+            width: 20px;
+            height: 20px;
+            margin-left:80%;
+            margin-top:5%;
+            padding: 0;
+        }
+        
+        #upload-progress{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top:100px;   
+            
+        }
+        .batch-upload-form{
+                    background:#FFF;
+                    padding: 15px;
+                    h2{
+                    margin: 0 0 10px 0;
+                    padding: 0;
+                    color: #00a963;
+                    font-size: 16px;
+                    font-family: 'Gotham';
+                    font-size: 500; 
+                }
+                .batch-upload-form{
+                    border: 1px dashed #006bd5;
+                    width:100%;
+                    height: 362px;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 12% 0 0 0;
+                    img{
+                        margin: 0 0 10% 0;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 0;
+                        text-align: center;
+                        font-size: 14px;
+                        &.browse-text{
+                            font-size: 12px;
+                            span{
+                                color: #006bd5;
+                            }
+                        }
+                    } 
+                    button{
+                        color: #006bd5;
+                        border: 1px solid #006bd5;
+                        border-radius: 60px;
+                        margin: 8% 0 0 0;
+                        text-align: center;
+                        width: 250px;
+                        padding: 0 0 5px 15px;
+                        background: transparent;
+                    }
+                }
+        }
+        .batch-btns{
+                 margin: 20px 0 0 0;
+                 float: right;
+                .claer-btn-batch{
+                    border: 1px solid #006bd5;
+                    color: #006bd5;
+                    background: transparent;
+                    text-align: center;
+                    padding: 5px 25px;
+                    border-radius: 60px;
+                    font-size: 12px;
+                    font-family: 'Gotham';
+                    font-weight: 500;
+                }
+              .submit-btn-batch{
+                    border: 1px solid #006bd5;
+                    background: #006bd5;
+                    color: #FFF;
+                    text-align: center;
+                    padding: 5px 25px;
+                    border-radius: 60px;
+                    font-size: 12px;
+                    font-family: 'Gotham';
+                    font-weight: 500;
+              }
+            }   
+    }
+}
